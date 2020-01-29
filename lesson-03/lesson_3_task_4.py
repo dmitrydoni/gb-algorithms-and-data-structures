@@ -15,4 +15,4 @@ for n in arr_most_freq_num:
         most_freq_num_cnt = n_freq
         most_freq_num = n
 
-print("Most frequently occurring number: ", most_freq_num)
+print(f'Most frequently occurring number: {most_freq_num} (occurs {most_freq_num_cnt} times)')
