@@ -6,6 +6,7 @@ Note: please do not confuse "minimal" and "maximal negative". These two are diff
 """
 
 import random
+import cProfile
 
 
 def test_func_max_neg_element(func):
@@ -42,6 +43,21 @@ def func_max_neg_element(n):
 
 # test_func_max_neg_element(func_max_neg_element)
 
+# cProfile.run('func_max_neg_element(20)')
+# 119 function calls in 0.000 seconds
+# 11    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+
+# cProfile.run('func_max_neg_element(100)')
+# 572 function calls in 0.000 seconds
+# 43    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+
+# cProfile.run('func_max_neg_element(1000)')
+# 5848 function calls in 0.003 seconds
+# 545    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+
+# cProfile.run('func_max_neg_element(10000)')
+# 57632 function calls in 0.026 seconds
+# 4950    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
 
 # timeit
 # python -m timeit -n 1000 -s "import lesson_4_task_1_1" "lesson_4_task_1_1.func_max_neg_element(20)"
